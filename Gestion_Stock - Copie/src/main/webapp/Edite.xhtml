@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f7e6;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+           width: 380px;
+        
+        }
+        .form-container {
+            border-radius: 10px;
+            background-color: #F2EAD3;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-container h2 {
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container .button-container {
+            
+            margin-top: 50px;
+            left:50px;
+        }
+
+        .form-container .button-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container .button-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</h:head>
+
+<body>
+    <div class="form-container">
+        <h2>Edit Product</h2>
+        <h:form>
+            <label for="editNomArt">Product Name:</label>
+            <h:inputText id="editNomArt" value="#{affichage.p.nomArt}" />
+
+            <label for="editPrixArt">Product Price:</label>
+            <h:inputText id="editPrixArt" value="#{affichage.p.prixArt}" />
+
+            <label for="editDescArt">Product Description:</label>
+            <h:inputTextarea id="editDescArt" value="#{affichage.p.descArt}" />
+
+            <label for="editQteArt"> Product Quantity:</label>
+            <h:inputText id="editQteArt" value="#{affichage.p.qteArt}" />
+            <label for="categore">Product Categorie:</label>
+            <h:inputText id="categore" value="#{affichage.p.categorie}" />
+            
+            <div class="button-container">
+                <h:commandButton action="#{affichage.edit}" value="Edit" />
+            </div>
+        </h:form>
+    </div>
+</body>
+</html>

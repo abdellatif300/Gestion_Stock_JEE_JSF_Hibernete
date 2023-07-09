@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <link rel="stylesheet" type="text/css" href="../css/ListCommande.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</h:head>
+
+<body>
+
+         
+   <div class="ss">
+    <h:form>
+        <br />
+        <h:dataTable var="pr" value="#{affichage.getAll2()}" border="1" cellpadding="2" cellspacing="2" styleClass="product-table">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{pr.codeArt}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">date Prevue Livraison</f:facet>
+                <h:outputText value="#{pr.qteCommandé}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Quantité Commande</f:facet>
+                <h:outputText value="#{pr.datePrevueLivraison}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Option</f:facet>
+                <h:commandLink styleClass="delete-icon" value="" action="#{affichage.delet(pr)}"
+                               onclick="return confirm('Are you sure?')"></h:commandLink>
+                <h:commandLink styleClass="edit-icon" value="" action="#{affichage.editCommand(pr)}"></h:commandLink>
+
+            </h:column>
+        </h:dataTable>
+    </h:form>
+  </div>
+</body>
+</html>

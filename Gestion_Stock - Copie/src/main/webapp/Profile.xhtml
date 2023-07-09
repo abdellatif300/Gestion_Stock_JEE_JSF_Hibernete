@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <title>Gestion Stock</title>
+        <link rel="stylesheet" type="text/css" href="../css/Profile.css"/> 
+        <h:outputStylesheet library="javax.faces" name="styles.css" />
+        <h:outputScript library="javax.faces" name="js/jquery-3.6.0.min.js" target="head" />
+        <h:outputScript library="javax.faces" name="js/fontawesome.min.js" target="head" />
+   <style>
+     h3{
+    text-align: center;
+     }
+   </style>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <!-- Upside Area -->
+            <div class="upsideArea">
+                <div class="avatar">
+                    <h:graphicImage value="/photo.jpeg" alt="" />
+                    
+                   
+                </div>
+               <br></br>
+
+               <h3>Admin</h3>
+                
+                 <span class="button">
+			        <h:form>
+			            <h5>
+			                <h:outputText value=""/>
+			                <h:commandButton value="Sign out" action="#{affichage.logout}" styleClass="sign-out-button"/>
+			            </h5>
+			        </h:form>
+              </span>
+            </div>
+
+        </div>
+         
+    </h:body>
+</ui:composition>

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+  
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url("images/Sans titr.jpg");
+                background-size: cover;
+                background-repeat: repeat-x;
+                animation: scrollBackground 20s linear infinite;
+            }
+
+            @keyframes scrollBackground {
+                0% { background-position: 0 0; }
+                100% { background-position: 100% 0; }
+            }
+
+            .form-box {
+                
+                width: 500px;
+                height: 500px;
+                padding: 30px;
+                background-color: #F9F5F6;
+                border-radius: 15px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            .form-box input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+               
+            }
+
+            .form-box input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #73BBC9;
+                color: #fff;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-left:10px;
+            }
+
+            .form-box input[type="submit"]:hover {
+                background-color: #808000;
+            }
+
+            .form-box h1 {
+                color: #808000;
+            }
+            H3{
+                
+             margin-left:12px;
+             color: #808000;
+            }
+    

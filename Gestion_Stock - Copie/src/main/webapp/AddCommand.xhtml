@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Edit Article</title>
+    <link rel="stylesheet" type="text/css" href="../css/AddCommand.css" />
+    <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    var numberInput = document.getElementById('aa');
+    numberInput.value = '';
+  });
+</script>
+    
+</h:head>
+<body>
+    
+    <div class="cont">
+        <h2> Add Commande</h2>
+        <h:form prependId="false">
+           <div class="form-group">
+			    <label for="date">Expected Delivery Date:</label>
+			    <h:inputText id="date" value="#{affichage.p1.datePrevueLivraison}" required="true">
+			        <f:convertDateTime pattern="yyyy-MM-dd" />
+			    </h:inputText>
+			    <h:message for="date" styleClass="error" />
+			</div>
+            <div class="form-group">
+                <label for="aa">quantity:</label>
+                <h:inputText id="aa" value="#{affichage.p1.qteCommandé}" required="true"/>
+                <h:message for="aa" styleClass="error" />
+            </div>
+            <div class="form-group">
+              <label for="aa">Product:</label>
+              <h:selectOneMenu class="select-style" value="#{affichage.p1.productId}">
+				<f:selectItems value="#{affichage.getAll1()}" var="option"
+                   itemLabel="#{option.nomArt}" itemValue="#{option.codeArt}" />
+			</h:selectOneMenu>
+           </div>
+           
+            <div class="form-group">
+                <h:commandButton action="#{affichage.add1()}" value="Add Commande" styleClass="btn" />
+            </div>
+        </h:form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="../css/AddProduct.css" /> 
+</h:head>
+<body>
+    <div class="container1">
+        <h2>Add Product</h2>
+        <h:form>
+            <div class="form-group">
+                <label for="nomArt">Product Name:</label>
+                <h:inputText id="nomArt" value="#{affichage.p.nomArt}" required="true" />
+                <h:message for="nomArt" styleClass="error" />
+            </div>
+            <div class="form-group" >
+                <label for="prixArt">Price Product:</label>
+                <h:inputText id="prixArt" value="#{affichage.p.prixArt}" required="true" />
+                <h:message for="prixArt" styleClass="error" />
+            </div>
+            <div class="form-group">
+                <label for="descArt">Description Product:</label>
+                <h:inputTextarea id="descArt" value="#{affichage.p.descArt}" required="true" />
+                <h:message for="descArt" styleClass="error" />
+            </div>
+            <div class="form-group">
+                <label for="qteArt">Quantity Product:</label>
+                <h:inputText id="qteArt" value="#{affichage.p.qteArt}" required="true" />
+                <h:message for="qteArt" styleClass="error" />
+            </div>
+             <div class="form-group">
+                <label for="qteArt">Categorie Product:</label>
+                <h:inputText value="#{affichage.p.categorie}" required="true" />
+                <h:message  styleClass="error" />
+            </div>
+           
+            <div class="form-group">
+                <h:commandButton action="#{affichage.add()}" value="Add product"  />
+            </div>
+        </h:form>
+    </div>
+</body>
+</html>

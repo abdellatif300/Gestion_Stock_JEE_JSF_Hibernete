@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+          /* styles.css */
+
+            /* Container */
+            .container {
+                display: flex;
+                flex-direction: row;
+                height: 80vh;
+                max-width:auto;
+
+            }
+
+            /* Upside Area */
+            .upsideArea {
+                flex: 1;
+                background-color: #c0c0c0;
+                padding: 20px;
+                max-width: 240px;
+                border-radius: 30px;
+            }
+
+            .avatar {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .avatar img {
+                width: 85px;
+                height: 80px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .avatarName {
+                font-weight: bold;
+            }
+
+            .sideMenu {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sideMenu li {
+                margin-bottom: 10px;
+            }
+
+            .sideMenu a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .sideMenu a i {
+                margin-right: 10px;
+            }
+
+            /* Main Area */
+            .mainArea {
+                flex: 3;
+                background-color: #fff;
+                padding: 20px;
+            }
+
+            .mainContent {
+                /* Add your styles for the main content area here */
+            }
+
+            /* Media Queries */
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+
+                .upsideArea, .mainArea {
+                    flex: none;
+                }
+            }
+           .button {
+			    display: inline-block;
+			    padding: 10px;
+			    border-radius: 4px;
+			    margin-top: 10px;
+			}
+			
+			.sign-out-button {
+			    background-color: #FF8C00;
+			    color: white;
+			    border: none;
+			    padding: 8px 16px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 14px;
+			    border-radius: 4px;
+			    cursor: pointer;
+			}
+			
+			.sign-out-button:hover {
+			    background-color: #FFA500;
+			}
+           
+  

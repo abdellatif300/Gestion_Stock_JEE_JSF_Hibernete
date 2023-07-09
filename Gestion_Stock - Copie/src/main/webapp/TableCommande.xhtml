@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="NewFile.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		
+		<script>
+			$(document).ready( function () {
+				$('.myTable').DataTable();
+			} );
+		</script>
+	</h:head>
+	
+	<body>
+	      
+		<h:form>
+			<br />
+			
+			
+			<table class="myTable" border="1">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Product Name</th>
+						<th>quantity Commande</th>
+						<th>Expected Delivery Date</th>
+						<th>Option</th>
+					</tr>
+				</thead>
+				<tbody>
+					<ui:repeat var="pr" value="#{affichage.getAll2()}">
+						<tr>
+							<td>#{pr.codeArt}</td>
+							<td>#{pr.productId == null ? affichage.getProductNamebyId(pr.productId) : ''} </td>
+							<td>#{pr.qteCommandé}</td>
+							<td>#{pr.datePrevueLivraison}</td>
+							<td>
+								<h:commandLink styleClass="delete-icon" value="" action="#{affichage.delet(pr)}"
+											   onclick="return confirm('Are you sure?')"></h:commandLink>
+								 <h:commandLink styleClass="edit-icon" value="" action="#{affichage.editCommand(pr)}"></h:commandLink>
+								
+							</td>
+						</tr>
+					</ui:repeat>
+				</tbody>
+			</table>
+		</h:form>
+	</body>
+</html>

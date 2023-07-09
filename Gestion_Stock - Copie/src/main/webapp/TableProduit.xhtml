@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../css/ListCommande.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		
+		<script>
+			$(document).ready( function () {
+				$('.myTable').DataTable();
+			} );
+		</script>
+		<style>
+		.text{
+		
+		  background-color: #f2f2f2;
+		  
+		}
+		
+		</style>
+	</h:head>
+	
+	<body>
+	
+	            <div class="text">
+			        <h:form>
+			            <h:commandButton value="Generate PDF" action="#{affichage.generatePDF}" />
+			        </h:form>
+			    </div>
+		<h:form>
+			<br />
+		
+			<h:dataTable class="myTable" var="product" value="#{affichage.getAll1()}" border="1">
+				<h:column>
+					<f:facet name="header">Product code</f:facet>
+					#{product.codeArt}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Product Name</f:facet>
+					#{product.nomArt}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Quantity Product</f:facet>
+					#{product.qteArt}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Categorie Product</f:facet>
+					#{product.categorie}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Description Product</f:facet>
+					#{product.descArt}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Price Product</f:facet>
+					#{product.prixArt}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Option</f:facet>
+					<h:commandLink styleClass="delete-icon" value="" action="#{affichage.delete(product)}"
+					               onclick="return confirm('Are you sure?')"></h:commandLink>
+					<h:commandLink styleClass="edit-icon" value="" action="#{affichage.edit(product)}"></h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		<br />
+		
+	</body>
+</html>

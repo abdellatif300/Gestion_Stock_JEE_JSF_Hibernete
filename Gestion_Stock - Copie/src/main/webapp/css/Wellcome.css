@@ -1,0 +1,44 @@
+@charset "UTF-8";
+ 
+        .container7 {
+            background-image: url("your-image.jpg");
+            background-size: cover;
+            background-position: center;
+            height:60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top:-20px;
+        }
+        
+        .welcome-message {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        
+        h1 {
+            color: #FF8C00; /* Custom text color, you can change it */
+        }
+        
+        p {
+            color: #000;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF8C00; /* Same color as the heading */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #FFA500; /* Slightly darker shade on hover */
+        }

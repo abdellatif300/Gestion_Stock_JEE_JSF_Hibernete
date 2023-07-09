@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+
+   <f:view>
+    <f:metadata>
+        <f:viewParam name="PagePosition" />
+    </f:metadata>
+  </f:view>
+
+     <title>Gestion Stock</title>
+     <link rel="stylesheet" type="text/css" href="../css/index.css" /> 
+     
+     <link rel="stylesheet" type="text/css" href="../css/AddCommand.css" />
+     <link rel="stylesheet" type="text/css" href="../css/AddProduct.css" />
+     <link rel="stylesheet" type="text/css" href="../css/ListCommande.css" />
+     <link rel="stylesheet" type="text/css" href="NewFile.css" />
+     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    
+    <script>
+	var lastpage = "dashboard";
+    
+    $(document).ready(function() {
+        // Initially show the dashboard page
+        var pagetest = '${param.PagePosition}';
+        if(pagetest ==="")
+            pagetest = "dashboard";
+        showPage(pagetest);
+
+        // Handle navigation clicks
+        $('.nav-link').click(function(e) {
+            e.preventDefault();
+            var page = $(this).data('page');
+            showPage(page);
+        });
+    });
+
+    function showPage(page) {
+        
+        // Hide all pages
+        $('.page').hide();
+
+        // Show the selected page
+        $('#' + page).show();
+        lastpage = page;
+        // Update active navigation link
+        $('.nav-link').removeClass('active');
+        $('.nav-link[data-page="' + page + '"]').addClass('active');
+    }
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div id="left-panel" class="aa">
+            <ui:include src="Profile.xhtml" /> 
+        </div>
+
+        <div id="right-panel" class="bb">
+          <div class="navx">
+			<nav class="navbar">
+			     <ul class="navbar-nav">
+			        <li><a href="#" class="nav-link active" data-page="dashboard">Dashboard</a></li>
+			        <li><a href="NewFile.xhtml" class="nav-link" data-page="produit">Add Product</a></li>
+			        <li><a href="#" class="nav-link" data-page="commande">List Product</a></li>
+			        <li><a href="#" class="nav-link" data-page="admin">Add Command</a></li>
+			        <li><a href="#" class="nav-link" data-page="admi">List Command</a></li>
+			    </ul>
+			</nav>
+          </div>  
+            <div id="dashboard" class="page">
+                <ui:include src="Wellcome.jsp" />
+            </div>
+
+            <div id="produit" class="page">
+               <ui:include src="AddProduct.xhtml" />
+            </div>
+             
+            <div id="commande" class="page">
+               <ui:include src="TableProduit.xhtml" />
+            </div>
+     
+
+            <div id="admin" class="page">
+                <ui:include src="AddCommand.xhtml" />
+            </div>
+            
+            <div id="admi" class="page">
+                <ui:include src="TableCommande.xhtml" />
+            </div>
+        </div>
+    </div>
+   <ui:include src="footer.jsp" />
+   
+   
+</body>
+</html>
