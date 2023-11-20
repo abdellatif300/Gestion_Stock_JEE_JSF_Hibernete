@@ -1,0 +1,89 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gestion_vend:war exploded">
+    <output-path>$PROJECT_DIR$/target/gestion_vend-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>gestion_vend</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gestion_vend" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.12" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.6.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.2.Final" />
+          <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.11.20" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.1.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.2.3.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.1.2.Final" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.1" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.7" />
+          <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8" />
+          <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.struts:struts2-core:2.5.30" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.31" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.29" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.8.1" />
+          <element id="library" level="project" name="Maven: org.apache.struts.xwork:xwork-core:2.3.8" />
+          <element id="library" level="project" name="Maven: asm:asm:3.3" />
+          <element id="library" level="project" name="Maven: asm:asm-commons:3.3" />
+          <element id="library" level="project" name="Maven: asm:asm-tree:3.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.17.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.17.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:2.0.24" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:2.0.24" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.5.13.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:html2pdf:3.0.2" />
+          <element id="library" level="project" name="Maven: com.itextpdf:forms:7.1.13" />
+          <element id="library" level="project" name="Maven: com.itextpdf:kernel:7.1.13" />
+          <element id="library" level="project" name="Maven: com.itextpdf:io:7.1.13" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.64" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.64" />
+          <element id="library" level="project" name="Maven: com.itextpdf:layout:7.1.13" />
+          <element id="library" level="project" name="Maven: com.itextpdf:svg:7.1.13" />
+          <element id="library" level="project" name="Maven: com.itextpdf:styled-xml-parser:7.1.13" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.13" />
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
+          <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.6.2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
+          <element id="library" level="project" name="Maven: org.openpnp:opencv:4.5.1-2" />
+          <element id="library" level="project" name="Maven: com.github.sarxos:webcam-capture:0.3.12" />
+          <element id="library" level="project" name="Maven: com.nativelibs4java:bridj:0.7.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/gestion_vend-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="gestion_vend/web/Web" />
+    </root>
+  </artifact>
+</component>

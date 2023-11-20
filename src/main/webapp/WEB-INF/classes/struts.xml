@@ -1,0 +1,61 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name = "struts.devMode" value = "true" />
+  <package name="default" extends="struts-default">
+    <!-- LogiIn -->
+   <action name="login" method="execute" class="com.service.actions.LoginAction">
+      <result name="success">/index.jsp</result>
+      <result name="error">/login.jsp</result>
+    </action> 
+
+    <!-- SignUp -->
+    <action name="signup" method="executeSignUp" class="com.service.actions.SignUp">
+      <result name="success">/login.jsp</result>
+      <result name="error">/signup.jsp</result>
+    </action>
+      <!-- LogOut -->
+      <action name="logout" method="logOut" class="com.service.actions.LoginAction">
+          <result name="success">/login.jsp</result>
+      </action>
+      <!--add to cart -->
+      <action name="addToCartAction" method="addToCart" class="com.service.actions.CartAction">
+          <param name="codeArt">${codeArt}</param>
+          <result name="success">/products.jsp</result>
+      </action>
+      <action name="deletAction" method="deletFromCart" class="com.service.actions.CartAction">
+          <param name="codeArt">${codeArt}</param>
+          <result name="success">/cart.jsp</result>
+      </action>
+
+      <action name="commande" method="saveCommand" class="com.service.actions.ComandAction">
+          <result name="success">/invoice.jsp</result>
+          <result name="error">/cart.jsp</result>
+      </action>
+
+      <!-- updateprofail -->
+      <action name="updateInfo" method="update" class="com.service.actions.UpdateInfo">
+          <result name="success">/profile.jsp</result>
+          <result name="error">/updateProfile.jsp</result>
+      </action>
+      <!--upload pdf-->
+      <action name="download" method="downloadPdf" class="com.service.actions.PdfAction">
+          <result name="success">/invoice.jsp</result>
+      </action>
+      <!--send  pdf by email-->
+      <action name="sendByEmail" method="sendInEmail" class="com.service.actions.PdfAction">
+          <result name="success">/index.jsp</result>
+      </action>
+     <!-- select category -->
+      <action name="selectCat" method="selectCategory" class="com.service.actions.ProductAction">
+          <param name="category">${category}</param>
+          <result name="success">/products.jsp</result>
+          <result name="error">/login.jsp</result>
+      </action>
+<!-- test glasses-->
+      <action name="wearGlasses" method="testGlasses" class="com.service.actions.PythonServer">
+          <result name="success">/wearGlasses.jsp</result>
+          <result name="error">/products.jsp</result>
+      </action>
+  </package>
+
+</struts>
